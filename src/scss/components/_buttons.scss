@@ -1,0 +1,46 @@
+.arrow-down {
+    @include buttons;
+    transition: 0.3s;
+    position: absolute;
+    z-index: 15;
+    bottom: rem(60px);
+    &__icon {
+        width: rem(26px);
+        height: rem(16px);
+        fill: rgba($white, .7);
+        &:hover,
+        &:active{
+            width: rem(36px);
+            height: rem(26px);
+            fill: $white;
+        }
+    }
+    &:hover {
+        transform: scale(1.5);
+        transition: 0.3s;
+        .arrow-down__icon {
+            fill: $white;
+        }
+    }
+}
+
+.arrow-up {
+    justify-content: center;
+}
+
+.arrow-up__btn {
+    @include buttons;  
+    justify-content: center;
+}
+.arrow-up__icon {
+    width: rem(26px);
+    height: rem(16px);
+    transition: 0.3s;
+    fill: rgba($white, .7);
+    &:hover,
+    &:active{
+        transform: scale(1.5);
+        transition: 0.3s;
+        fill: $white;
+    }
+}

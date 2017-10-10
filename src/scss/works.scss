@@ -1,0 +1,24 @@
+//config
+@import "config/_variables.scss";
+@import "config/_mixins.scss";
+@import "config/_fonts.scss";
+@import "config/_base.scss";
+@import "config/_layout.scss";
+
+//components
+@import 'components/_preloader.scss';
+@import 'components/_water.scss';
+@import 'components/_section-title.scss';
+@import 'components/_section-picture.scss';
+@import 'components/_hamburger-menu.scss';
+@import 'components/_socials.scss';
+@import 'components/_person.scss';
+@import 'components/_buttons.scss';
+@import 'components/_triangles.scss';
+
+//sections
+@import 'sections/_top.scss';
+@import 'sections/works';
+@import 'sections/_slider.scss';
+@import 'sections/_feedback.scss';
+@import 'sections/_footer.scss';

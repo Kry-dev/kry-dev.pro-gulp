@@ -1,0 +1,36 @@
+.about-menu {
+    width: 100%;    
+}
+.about-menu__list {
+    display: flex;
+    border-radius: rem(0px) rem(0px) rem(5px) rem(5px);
+    overflow: hidden;
+}
+.about-menu__item {
+    flex:1;
+    background-color: rgba($green, .7);
+    border-right: rem(2px) solid rgba(#dee3e7, .5);
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: $green-hover;
+        transition: 0.3s;
+    }
+    &:active {
+        background-color: lighten($green-hover, 10%);
+        transition: 0.3s;
+    }
+    &:last-child {
+        border-right: none;
+    }
+}
+.about-menu__link {
+    display: block;
+    text-decoration: none;
+    padding: rem(15px);
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+    text-align: center;
+}

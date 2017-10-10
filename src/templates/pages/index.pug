@@ -1,0 +1,31 @@
+extends ../template
+include ../modules/mixins.pug
+
+block variables
+  - var title = 'Добро пожаловать'
+  - var pageName = 'index'
+
+block content
+  include ../modules/water
+  section.section.intro.preloader__hidden
+    header.intro__header
+      button.autorization-btn Авторизоваться
+    .intro__content
+      .intro__container
+        .intro__author
+          .intro__person
+            include ../modules/person
+          .intro__socials
+            include ../modules/socials
+          
+          - var authorMenu = [{name:'Мои работы',href: 'works.html'},{name:'Обо мне',href: 'about.html'},{name:'Блог',href: 'blog.html'}]
+          +menu('about-menu', authorMenu)
+          
+        .intro__login
+          include ../modules/login
+
+    footer.intro__footer
+      .author © Кривда Ярослав | Front-end developer | 2017
+  include ../modules/modal
+block scripts
+  script(src=`./scripts/${pageName}.min.js`)

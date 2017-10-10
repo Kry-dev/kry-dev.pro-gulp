@@ -1,0 +1,9 @@
+.section-picture {
+    width: 100%;
+    height: 100%;
+    @include center;
+    fill: rgba($green-hover, 0.12);
+    &_top {
+        fill: rgba($white, 0.12);
+    }
+}

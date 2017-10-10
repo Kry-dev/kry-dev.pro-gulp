@@ -1,0 +1,31 @@
+.socials {
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
+    &__item{
+        display: flex;
+
+    }
+    &__item + .socials__item {
+        margin-left: rem(30px);
+    }
+    &__link {
+        display: flex;
+    }
+
+    &__icon {
+        width: rem(31px);
+        height: rem(30px);
+        fill: rgba($white, .5);
+        transition: 0.3s;
+        align-self: flex-end;
+
+        &:hover {
+            fill: $green-hover;
+            transition: 0.3s;
+        }
+    }
+}

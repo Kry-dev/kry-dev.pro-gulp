@@ -1,0 +1,62 @@
+.section-title {
+    text-align: center;
+    color: $title-color;
+    font-family: "Sansus Webissimo";
+    font-size: rem(35px);
+    font-weight: 400;
+    line-height: rem(41px);
+    text-transform: uppercase;
+    display: block;
+
+    &:after {
+        content: "";
+        width: rem(89px);
+        height: rem(29px);
+        display: block;
+        margin: 0 auto;
+        border-bottom: rem(3px) solid $title-color;
+    }
+
+    &_login {
+        color: $white;
+    
+        &:after {
+            border-bottom: rem(3px) solid $white;
+        }
+    }
+
+    &_about {
+        font-size: rem(63px);
+        line-height: rem(66px);
+    }
+    &_i-am {
+
+    }
+    &_usefulness {
+        
+    }
+
+    &_contacts {
+
+    }
+    &_fixed-menu {
+        color: $white;
+        font-size: rem(63px);
+        line-height: rem(24px);
+        &:after {
+            content: "";
+            border-color: transparent;
+        }
+
+        &:hover {
+            &:after {
+                border-color: $white;
+            }
+        }
+    }
+    &_description-sl {
+        content: "";
+        height: rem(17px);
+    }
+    
+}

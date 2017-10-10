@@ -1,0 +1,38 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__photo {
+        width: rem(140px);
+        height: rem(140px);
+        background-position: center center;
+        background-size: cover;
+        border-radius: 50%;
+        margin-bottom: rem(20px);
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name {
+        color: $white;
+        font-family: Roboto;
+        font-size: rem(28px);
+        font-weight: 500;
+        line-height: rem(34px);
+        margin-bottom: rem(9px);
+    }
+
+    &__discription {
+        opacity: 0.8;
+        color: $white;
+        font-family: Roboto;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: rem(24px);
+    }
+}

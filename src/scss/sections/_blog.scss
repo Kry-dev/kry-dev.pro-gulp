@@ -1,0 +1,235 @@
+.blog {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+$margin-post-items: rem(70px);
+$margin-post-rows: rem(21px);
+
+.blog__container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    padding-top: rem(70px);
+    overflow: hidden;
+
+}
+
+.blog__main {
+    width: 67%;
+    @include tab {
+        width: 100%;
+    }
+}
+
+.post {
+    align-self: center;
+    overflow: hidden;
+    padding: 0 1%;
+    @include tab {
+        padding: 0 2%;
+    }
+}
+
+.post_list {
+    width: 78%;
+    @include desk {
+        width: 100%;
+    }
+}
+
+.post__item {
+    margin-bottom: $margin-post-items;
+}
+
+.post__item + .post__item {
+    &:before {
+        content: "";
+        margin-bottom: $margin-post-items;
+        width: 70%;
+        height: rem(5px);
+        background-color: $black;
+        opacity: 0.07;
+        display: block;
+    }
+}
+
+.article__title {
+    color: $title-color;
+    font-family: "Sansus Webissimo";
+    font-size: rem(35px);
+    font-weight: 400;
+    line-height: rem(41px);
+    margin-bottom: $margin-post-rows;
+}
+
+.article__date {
+    opacity: 0.7;
+    color: $green;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    display: block;
+    margin-bottom: $margin-post-rows;
+}
+
+.article__content {
+
+    img {
+        width: 80%;
+        @include tab {
+            width: 100%;
+        }
+    }
+    p {
+        text-align: justify;
+        margin-bottom: rem(10px);
+        color: $title-color;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+
+
+
+
+
+.blog__navigation{
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1%;
+
+    @include tab {
+        width: 100%;
+        min-height: 100vh;
+        position: absolute;
+        top: rem(0px);
+        left: -101%;
+
+    }
+    &-toggle{
+        display: none;
+        @include tab {
+            display: block;
+        }
+    }
+}
+
+.blog__content {
+    width: 80%;
+    position: relative;
+
+    @include desk {
+        width: 100%;
+    }
+    @include tab {
+        width: 80%;
+        padding-left: 20%;
+        height: 100vh;
+        margin-top: -50px;
+        position: absolute;
+        transform: translate(2%,0);
+        box-shadow: rem(3px) 0 rem(3px) rgba(0, 0, 0, 0.2);
+        background-color: $green;
+        will-change: transform;
+
+        &_active {
+            transform: translate(80%,0);
+            transition: 0.3s;
+            z-index: 2;
+        }
+    }
+
+    .article{
+        margin-bottom: rem(40px);
+    }
+
+}
+
+.blog__navigation-links-list {
+    &:after {
+        content: "";
+        width: rem(50px);
+        height: rem(50px);
+        background-color: $green;
+        display: block;
+        @include center(y);
+        left: 100%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        display: none;
+        cursor: pointer;
+        @include tab {
+            display: block;
+        }
+    }
+
+    &:before {
+        content: "";
+        width: rem(100px);
+        height: rem(100px);
+        background-color: transparent;
+        display: block;
+        @include center(y);
+        left: 100%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        display: none;
+        cursor: pointer;
+        @include tab {
+            display: block;
+        }
+    }
+    @include tab {
+        padding-top: rem(20px);
+    }
+}
+
+.links-list__item {
+    text-align: right;
+    margin-bottom: rem(40px);
+    padding-right: rem(15px);
+    border-right: rem(3px) solid transparent;
+    transition: 0.2s;
+
+    @include tab {
+        margin-bottom: rem(20px);
+    }
+
+    &_active, &:hover {
+        transition: 0.2s;
+        border-right: rem(3px) solid $green;
+        .blog-menu__link {
+            color: $green;
+            font-family: Roboto;
+            font-size: rem(16px);
+            font-weight: 700;
+
+            @include tab {
+                color: $white;
+            }
+        }
+    }
+}
+
+.links-list__link {
+    display: block;
+    text-decoration: none;
+    color: $title-color;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: rem(26px);
+    padding: rem(15px) 0;
+
+    @include tab {
+        opacity: 0.7;
+        color: $white;
+    }
+}

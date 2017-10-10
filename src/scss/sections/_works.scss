@@ -1,0 +1,10 @@
+.works {
+    position: relative;
+    min-height: initial;
+    display: flex;
+    flex-direction: column;
+}
+.works__title {
+    margin: rem(25px) 0;
+}
+

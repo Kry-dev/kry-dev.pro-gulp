@@ -1,0 +1,235 @@
+.feedback {
+    position: relative;
+    background: url('../images/backgrounds/feedback-bg.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.feedback__title {
+    margin-bottom: rem(30px);
+    margin-top: rem(25px);
+    padding: rem(20px);
+    position: relative;
+}
+
+.feedback__reviews {
+    display: flex;
+    margin-bottom: rem(70px);
+    
+}
+
+.reviews {
+    justify-content: center;
+    @include mob {
+        padding: 0 1%;
+    }
+}
+
+.reviews__list {
+    display: flex;
+    text-align: center;
+    @include mob {
+        flex-direction: column;
+    }
+}
+.reviews__item {
+    max-width: 45%;
+    @include mob {
+        max-width: 100%;
+    }
+}
+.reviews__item + .reviews__item {
+    margin-left: rem(25px);
+    @include mob {
+        margin: 0;
+        margin-top: rem(40px);
+    }
+}
+.reviews__photo-container {
+    display: inline-block;
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: rem(21px);
+    
+}
+
+.reviews__photo {
+    max-height: 100%;
+}
+
+.reviews__text {
+    color: $title-color;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-style: italic;
+    line-height: rem(26px);
+    max-width: rem(350px);
+}
+
+.reviews__author-name {
+    font-family: Roboto;
+    font-size: rem(16px);
+    line-height: 24px;
+    color: $green-hover;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.reviews__author-status {
+    font-family: Roboto;
+    font-size: rem(16px);
+    line-height: 24px;
+    color: $black;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.feedback__form {
+    display: flex;
+    justify-content: center;
+    @include mob {
+        padding: 0 1%;
+    }
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    padding: rem(45px) rem(0px) rem(0px);
+    background-color: $white;
+    border-radius: rem(5px);
+    background-color:rgba($grey, 0.6);
+    width: rem(380px);
+    @include mob {
+        width: 100%;
+    }
+}
+
+.feedback-form__row {
+    position: relative;
+    display: flex;
+    padding: 0 rem(20px);
+    
+}
+
+.feedback-form__row + .feedback-form__row {
+    margin-top: rem(20px);
+}
+
+.feedback-form__title {
+    justify-content: center;
+    margin-bottom: rem(10px);
+}
+
+.feedback-form__input {
+    width: 100%;
+    padding: rem(16px) rem(20px);
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    background-color: rgba($white,.85);
+    border-radius: rem(27px);
+    border: none;
+    outline: none;
+
+    @include placeholder {
+        color: rgba($black, .6);
+    }
+
+    &_error {
+        border-color: $red;
+    }
+    &_correct {
+        border-color: $green;
+    }
+}
+
+.feedback__pop-up {
+    position: absolute;
+    padding: rem(16px) rem(20px);
+    background-color: $red;
+    color: $white;
+    box-shadow: 0 0 rem(10px) rgba($black, 0.1);
+    border-radius: rem(5px);
+    top: 125%;
+    @include center(x);
+    z-index: 1;
+    display: none;
+    white-space: nowrap;
+
+    &_show {
+        display: block;
+    }
+
+    &:after {
+        content: "";
+        @include center(x);
+        display: block;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        border: rem(10px) solid $red;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+}
+
+.feedback-form__textarea {
+    width: 100%;
+    height: rem(140px);
+    padding: rem(16px) rem(20px);
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    background-color: rgba($white,.85);
+    border-radius: rem(27px);
+    border: none;
+    outline: none;
+    resize: none;
+    @include placeholder {
+        color: rgba($black, .6);
+    }
+}
+
+.feedback-form__row-btn {
+    border-radius: rem(0px) rem(0px) rem(5px) rem(5px);
+    overflow: hidden;
+    padding: rem(0px);
+}
+.feedback-form__btn {
+    @include buttons;
+    width: 50%;
+    padding: rem(20px) 0;
+    background-color: $green;
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $green-hover;
+        transition: 0.3s;
+    }
+    &:active {
+        background-color: lighten($green-hover, 10%);
+        transition: 0.3s;
+    }
+}
+
+.feedback-form__btn + .feedback-form__btn {
+    border-left: rem(2px) solid rgba($grey, .5);
+}
+
+.feedback__bottom {
+    display: flex;
+    padding: rem(70px) 0;
+    @include mob {
+        padding: rem(70px) 1%;
+    }
+}

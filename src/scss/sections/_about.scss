@@ -1,0 +1,119 @@
+.about {
+    display: flex;
+    position: relative;
+    @include tab {
+        flex-direction: column;
+    }
+}
+
+.about__left,
+.about__right {
+    position: relative;
+    width: 50%;
+    padding: rem(30px) 0;
+    display: flex;
+    @include large {
+        padding: rem(30px) 4%;
+    }
+    @include tab {
+        width: 100%;
+    }
+}
+
+.about__left {
+    background-color: $begie;
+    @include large {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.about__right {
+    background-color: #f4f5f0;
+    flex-direction: column;
+    padding: rem(30px) 4%;
+}
+
+.about__title {
+    width: 50%;
+    align-self: flex-start;
+    position: relative;
+    padding: rem(55px) 0 rem(26px);
+    margin-bottom: rem(10px);
+    @include large {
+        width: 80%;
+        align-self: initial;
+    }
+}
+
+.about__i-am {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1%;
+    @include large {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.i-am__photo {
+    width: 100%;
+    margin-bottom: rem(40px);
+}
+
+.i-am__title {
+    margin-bottom: rem(30px);
+}
+
+.i-am__discription {
+    p {
+        margin-bottom: rem(15px);
+    }
+}
+
+.about__usefulness {}
+
+.usefulness__title {
+    margin-bottom: rem(30px);
+}
+
+.usefulness__discription {
+    margin-bottom: rem(50px);
+    p {
+        margin-bottom: rem(15px);
+    }
+}
+
+.about__skills {}
+
+.skills-list {}
+
+.skills-list__item {
+    margin-bottom: rem(40px);
+    &:last-child {
+        margin-bottom: rem(0px);
+    }
+}
+
+.skills-row {}
+
+.skills-row__title {
+    color: $title-color;
+    font-family: Roboto;
+    font-size: rem(28px);
+    font-weight: 500;
+    line-height: rem(32px);
+    margin-bottom: rem(20px);
+}
+
+.skills-row__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-row__item {
+    margin-right: rem(35px);
+    margin-bottom: rem(20px);
+}

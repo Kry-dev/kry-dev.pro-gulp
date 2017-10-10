@@ -1,0 +1,191 @@
+.login {
+    min-width: rem(380px);
+
+    &__form {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    &__row {
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-bottom: rem(20px);
+    }
+
+    &__input {
+    flex: 1;
+    padding: rem(16px);
+    border-radius: 0px rem(27px) rem(27px) 0px;
+    border: rem(3px) solid $white;
+    color: $black;
+    background-color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    outline: none;
+
+    @include placeholder {
+        color: rgba($black, .6);
+    }
+    &:focus {
+        border-color: #2A6B94;
+    }
+    &_error {
+        border-color: $red;
+    }
+    &_correct {
+        border-color: $green;
+    }
+}
+
+    &__icon-container {
+    width: rem(50px);
+    height: rem(58px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    border-radius: rem(27px) 0px 0px rem(27px);
+}
+    &__icon {
+        fill: $dark-grey;
+
+        &_error {
+            fill: $red;
+        }
+        &_correct {
+            fill: $green;
+        }
+    }
+    &__pop-up {
+    position: absolute;
+    padding: rem(16px) rem(20px);
+    background-color: $red;
+    color: $white;
+    box-shadow: 0 0 rem(10px) rgba($black, 0.1);
+    border-radius: rem(5px);
+    top: 130%;
+    left: rem(50px);
+    z-index: 1;
+    display: none;
+
+    &_show {
+        display: block;
+    }
+
+    &:before {
+        content: "";
+        @include center(x);
+        display: block;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        border: rem(10px) solid $red;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+}
+    &_label {
+    display: flex;
+    margin: 0px rem(20px);
+}
+    &__input-checkbox {
+    display: none;
+
+    &:checked + .login__checkbox-fake{
+        background-color: $green;
+    }
+}
+
+    &__checkbox-fake-svg {
+    width: rem(15px);
+    height: rem(15px);
+    @include center();
+    fill: $white;
+
+}
+    &__checkbox-fake,.login__radio-fake {
+    position: relative;
+    width: rem(20px);
+    height: rem(20px);
+    background-color: $white;
+    margin-right: rem(6px);
+    border-radius: 50%;
+}
+    &__radio-fake {
+    border-radius: 50%;
+}
+
+    &__text {
+    opacity: 0.8;
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+}
+    &__input-radio {
+    display: none;
+
+    &:checked + .login__radio-fake {
+        &:after {
+            content: "";
+            width: rem(8px);
+            height: rem(8px);
+            border-radius: 50%;
+            display: block;
+            background-color: $green;
+            @include center();    
+        }
+    }
+    &:checked + .login__radio-fake + .login__text {
+        color: $green;
+    }
+}
+
+
+    /* стилизация кнопок авторизации 26.09.17 */
+    &__form-btns {
+        width: 100%;
+        display: flex;
+        border-radius: rem(0px) rem(0px) rem(5px) rem(5px);
+        overflow: hidden;
+    }
+}
+.resume {
+    @include buttons;
+}
+.resume,.login__input-submit {
+    width: 50%;
+}
+
+.green-btn-style {
+    display: block;
+    text-decoration: none;
+    padding: rem(15px) rem(0px);
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+    text-align: center;
+    background-color: rgba($green, .7w);
+    transition: 0.3s;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    &:hover {
+        background-color: $green-hover;
+        transition: 0.3s;
+    }
+    &:active {
+        background-color: lighten($green-hover, 10%);
+        transition: 0.3s;
+    }
+}
+.green-btn-style + .green-btn-style {
+    border-left: rem(2px) solid rgba(#dee3e7, .5);
+}

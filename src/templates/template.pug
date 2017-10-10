@@ -1,0 +1,21 @@
+block variables
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="author" content="Kryvda Yaroslav" )
+    meta(name="description" content="Portfolio" )
+    meta(name="keywords" content="Portfolio Kryvda Yaroslav" )
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png")
+    link(rel='stylesheet' href=`./css/${pageName}.min.css`)
+      
+  body
+    include ./modules/preloader
+    .wrapper
+      block content
+    block scripts
+    

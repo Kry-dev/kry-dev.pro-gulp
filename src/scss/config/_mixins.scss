@@ -1,0 +1,77 @@
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+@mixin tab{
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
+
+@mixin mob{
+	@media screen and (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin desk{
+	@media screen and (max-width: $desktop) {
+		@content;
+	}
+}
+@mixin large{
+	@media screen and (max-width: $large) {
+		@content;
+	}
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin center($axis: 'center') {
+  position: absolute;
+
+  @if $axis == 'center' {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  @if $axis == 'x' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $axis == 'y' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin buttons {
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}

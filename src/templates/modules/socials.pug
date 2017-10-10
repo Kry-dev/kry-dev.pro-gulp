@@ -1,0 +1,9 @@
+
+.socials
+    ul.socials__list
+        - var socials = [{name: "vk", dimensions: {w:'31',h:'17'}, url: "http://vk.com/id5593980"},{name: "github", dimensions: {w:'26',h:'22'}, url: "https://github.com/Kry-dev"},{name: "in", dimensions: {w:'24',h:'22'}, url: "https://ru.linkedin.com/in/yaroslav-kryvda-32b88485/"},{name: "instagram", dimensions: {w:'24',h:'22'}, url: "https://www.instagram.com/yarikkrivda/"}];
+        each social in socials
+            li.socials__item
+                a.socials__link(href=`${social.url}`, target="_blank")
+                    svg.socials__icon(width=`${social.dimensions.w}` height=`${social.dimensions.h}`)
+                        use(xlink:href=`images/sprite/mySprite.min.svg#${social.name}`)

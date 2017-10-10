@@ -1,0 +1,112 @@
+.intro {
+    height: 100%;
+    width: 100%;
+    min-width: rem(320px);
+    display: flex;
+    flex-direction: column;
+    //background: url('../images/backgrounds/main-background.jpg') center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.intro__header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: rem(24px) rem(100px);
+    @include mob {
+        justify-content: center;
+    }
+}
+.autorization-btn {
+    border: rem(1px) solid $white;
+    border-radius: rem(20px);
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+    padding: rem(10px) rem(20px);
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+
+    &:hover {
+        border-color: $green;
+        background-color: $green-hover;
+        transition: 0.2s;
+    }
+
+    &:active {
+        background-color: lighten($green-hover, 10%);
+        transition: 0.2s;
+    }
+}
+
+.intro__content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    perspective: 1000;
+    &_active {
+        .intro__container {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.intro__container {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.intro__author, .intro__login{
+    /* скрывает обратную сторону веревернутого блока! */
+    backface-visibility: hidden;
+
+    width: rem(380px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:$black-transparent;
+    border-radius: rem(5px);
+    padding-top: rem(40px);
+}
+
+.intro__author {
+    z-index: 2;
+    position: absolute;
+}
+
+.intro__login {
+    top: -50%;
+    transform: rotateY(180deg);
+}
+
+.intro__person {
+    margin-bottom: rem(35px);  
+}
+.intro__socials {
+    margin-bottom: rem(40px);
+}
+.intro__footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: rem(40px);
+
+    @include mob {
+        padding-bottom: rem(10px);
+    }
+}
+
+.author {
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    text-align: center
+}

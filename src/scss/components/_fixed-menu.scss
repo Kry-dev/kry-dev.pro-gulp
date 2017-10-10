@@ -1,0 +1,27 @@
+.fixed-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: rem(650px);
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba($green, 0.4);
+    z-index: 1;
+
+    &_show {
+        display: flex;
+    }   
+}
+
+.fixed-menu__item {
+    margin-bottom: rem(50px);
+}
+
+.fixed-menu__link {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "kry-dev.pro-gulp",
+  "version": "1.0.0",
+  "description": "third project of Loftschool WebDev programm",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yaroslav Kryvda",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "curry": "^1.2.0",
+    "del": "^3.0.0",
+    "gsap": "^1.20.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-webpack": "^1.5.0",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.6",
+    "webpack-glsl-loader": "^1.0.1"
+  }
+}

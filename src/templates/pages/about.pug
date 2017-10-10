@@ -1,0 +1,118 @@
+extends ../template
+include ../modules/mixins.pug
+
+block variables
+  - var title = 'Обо мне'
+  - var pageName = 'about'
+
+block content
+  include ../modules/water
+  section.section.top
+    header.top__header
+      .top__socials
+        include ../modules/socials
+      .top__hamburger-menu
+        include ../modules/hamburger-menu
+    .top__content
+      .top__title
+        svg(width='100' height='100').section-picture.section-picture_top
+          use(xlink:href=`images/sprite/mySprite.min.svg#portfolio_header`)
+        .top__whoami
+          include ../modules/person
+    .top__bottom
+      button.arrow-down
+        svg.arrow-down__icon(width=`26` height=`16`)
+          use(xlink:href=`images/sprite/mySprite.min.svg#arrow_down`)
+  section.section.about
+    svg.triangle.triangle_fill_begie(viewbox="0 0 1000 100" preservAspectRatio="none")
+        polygon(points='0,0 0,100 500,100')
+    svg.triangle.triangle_fill_white(viewbox="0 0 1000 100" preservAspectRatio="none")
+        polygon(points='500,100 1000,0 1000,100')
+    .about__left  
+      .about__title
+        svg(width='100' height='100').section-picture
+          use(xlink:href=`images/sprite/mySprite.min.svg#about_header`)
+        .section-title.section-title_about Обо мне
+      .about__i-am
+        img(src="images/photos/yaroslav-kryvda.jpg", alt="photo").i-am__photo
+        .i-am__title  
+          .section-title.section-title_i-am Кто я 
+        .i-am__discription
+          p Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
+          p С 2010г. по 2015г. работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
+          p Обожаю путешествовать и фотографировать. Фотографирую людей, природу и моменты прекрасного, что поймает объектив моей камыеры.
+
+    .about__right
+      
+      .about__usefulness
+        .usefulness
+          .usefulness__title
+            .section-title.section-title_usefulness Чем я могу быть вам полезен 
+          .usefulness__discription
+            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__skills
+        ul.skills-list
+          - 
+            var skills = [
+              {name: 'Frontend',skills:['Html5', 'css3', 'JavaScript']},
+              {name: 'Backend',skills:['PHP', 'mySQL', 'Node.js & npm','Mongo.db']},
+              {name: 'WorkFlow',skills:['Git','Gulp','Bower']}
+            ]
+          each item in skills
+            li.skills-list__item.skills-row
+              .skills-row__title #{item.name}
+              ul.skills-row__list
+                each skill in item.skills
+                  li.skills-row__item.svg-circle
+                    svg(width='110' height='110' viewBox="0 0 110 110").svg-circle__body
+                      circle(r="45" cx="50%" cy="50%").svg-circle__first-border
+                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)").svg-circle__second-border.circle-90
+                    .svg-circle__title #{skill}
+  section.section.map
+    #map
+    .map__contacts
+      .contacts
+        .contacts__title
+          .section-title.section-title_contacts Контакты
+        ul.contacts__list
+          - 
+            var contacts = [
+            {logo: 'skype', name: 'yarik890105' },
+            {logo: 'envelope2', name: 'yaroslavkryvda@gmail.com' },
+            {logo: 'phone2', name: '+38 096 919 99 55' },
+            {logo: 'map_marker', name: 'Украина, г. Винница' }
+            ]
+          each item in contacts
+            li.contacts__item
+              svg.contacts__icon(width=`24` height=`24`)
+                use(xlink:href=`images/sprite/mySprite.min.svg#${item.logo}`)
+              .contacts__name #{item.name}
+
+    footer.footer
+      .footer__row
+        .footer__col
+          .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+        .footer__col
+          .footer__menu
+            - 
+              var menu = [
+                  {name: 'Главная страница', href:'index.html'},
+                  {name:'Мои работы',href: 'my-works.html'},
+                  {name:'Обо мне',href: 'about.html'},
+                  {name:'Блог',href: 'blog.html'}
+              ]
+            
+            +menu('menu', menu)
+          .footer__socials
+            include ../modules/socials
+        .footer__col
+          .footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          .footer__quote-author — Martin Golding 
+      .footer__row.footer__row_fill_green
+        .author © Кривда Ярослав | Front-end developer | 2017
+  
+  
+block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxxZqzF80hXY_JqmWpdGliR9OG45V5WrM&callback=initMap"
+  type="text/javascript")
+  script(src=`./scripts/${pageName}.min.js`)

@@ -1,0 +1,232 @@
+.slider {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include tab {
+        flex-wrap: nowrap;
+    }
+}
+
+.description-sl {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebefe2;
+    @include tab {
+        width: 100%;
+        height: 35%;
+    }
+    @include mob {
+        height: 30%;
+    }
+}
+
+.description-sl__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 50%;
+    @include tab {
+        max-width: 90%;
+    }
+}
+
+.description-sl__title {
+    color: $title-color;
+    font-family: "Sansus Webissimo";
+    font-size: rem(30px);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: rem(27px);
+    &:after {
+        content: "";
+        width: 89px;
+        height: 3px;
+        display: block;
+        background-color: $title-color;
+        margin: 0 auto;
+        margin-top: rem(29px);
+        @include tab {
+            margin-top: rem(17px);
+        }
+        @include mob {
+            margin-top: rem(8px);
+        }
+    }
+    @include tab {
+        margin-bottom: rem(19px);
+    }
+    @include mob {
+        margin-bottom: rem(8px);
+    }
+}
+
+.description-sl__skills {
+    color: $green;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: rem(57px);
+    @include tab {
+        margin-bottom: rem(38px);
+    }
+    @include mob {
+        margin-bottom: rem(8px);
+    }
+}
+
+.description-sl__link {
+    display: flex;
+    text-decoration: none;
+    background-color: $green;
+    padding: rem(16px) rem(25px);
+    border-radius: rem(27px);
+}
+
+.description-sl__icon {
+    fill: $white;
+    margin-right: rem(12px);
+}
+
+.description-sl__text {
+    color: $white;
+    font-family: Roboto;
+    font-size: rem(16px);
+    font-weight: 500;
+}
+
+.slider__photos {
+    width: 50%;
+    height: 75%;
+    overflow: hidden;
+
+    @include tab {
+        width: 100%;
+        height: 50%;
+        order: -1;
+    }
+    @include mob {
+        height: 43%;
+    }
+}
+
+.photos-sl {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #e1e4d7;
+}
+
+.photos-sl__item {
+    width: 100%;
+    height: 100%;
+    padding: rem(50px);
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+    @include tab {
+        padding: 4%;
+    }
+}
+
+.photos-sl__slide {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+/* класс для активного элемента слайдера */
+.focus {
+    z-index: 2;
+    opacity: 1;
+    transition: 1s;
+}
+
+.slider__nav-btns {
+    width: 50%;
+    @include tab {
+        width: 100%;
+    }
+}
+
+.nav-btns {
+    height: 25%;
+    display: flex;
+    overflow: hidden;
+    @include mob {
+        height: 25%;
+    }
+}
+
+.nav-btns__sl-btn {
+    width: 50%;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.7;
+    &_fill_prev {
+        background-color: rgba(#b0b7aa, 0.7);
+        &:hover {
+            background-color: darken(#b0b7aa, 5%);
+        }
+        &:active {
+            background-color: darken(#b0b7aa, 2%);
+        }
+    }
+    &_fill_next {
+        background-color: rgba(#93998d, 0.7);
+        &:hover {
+            background-color: darken(#93998d, 5%);
+        }
+        &:active {
+            background-color: lighten(#93998d, 2%);
+        }
+    }
+
+}
+.sl-btn__list {
+    width: 100%;
+    height: 100%;
+    /* перемещение слайдера */
+    // transform: translateY(-30%);
+    will-change: transform;
+    transition: 0.3s;
+}
+
+.sl-btn__item {
+    padding: rem(10px);
+    width: 100%;
+    height: 100%;
+}
+
+.sl-btn__slide {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.sl-btn__btn {
+    fill: $black;
+    @include center;
+    fill: $white;
+    width: rem(43px);
+    height: rem(27px);
+}
+.hide-letter {
+    opacity: 0;
+}
+.show-letter {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+}

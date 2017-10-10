@@ -1,0 +1,6 @@
+mixin menu(className,menu)
+    nav(class=className)
+        ul(class=`${className}__list`)
+            each item in menu
+                li(class=`${className}__item`)
+                    a(href=`${item.href}` class=`${className}__link`) #{item.name}

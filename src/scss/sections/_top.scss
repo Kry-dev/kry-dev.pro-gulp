@@ -1,0 +1,54 @@
+.top {
+    height: 100%;
+    //background: url('../images/backgrounds/main-background.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(30px);
+    }
+
+    &__socials, .socials__icon {
+        fill: $white;
+        z-index: 100;
+        &:hover{
+            fill: $green;
+        }
+    }
+    &__hamburger-menu {
+
+    }
+
+    &__content {
+        flex:1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        padding: rem(30px) rem(0px);
+        z-index: 4;
+    }
+
+    &__title {
+        width: 80%;
+        height: 60%;
+        position: relative;
+    }
+
+    &__person {
+        @include center;
+    }
+    &__section-picture {
+        width: 100%;
+        height: 100%;
+        @include center;
+    }
+}
