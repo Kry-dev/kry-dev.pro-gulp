@@ -2,7 +2,7 @@ extends ../template
 include ../modules/mixins.pug
 
 block variables
-  - var title = 'Обо мне'
+  - var title = 'About me'
   - var pageName = 'about'
 
 block content
@@ -32,11 +32,11 @@ block content
       .about__title
         svg(width='100' height='100').section-picture
           use(xlink:href=`images/sprite/mySprite.min.svg#about_header`)
-        .section-title.section-title_about Обо мне
+        .section-title.section-title_about About me
       .about__i-am
         img(src="images/photos/yaroslav-kryvda.jpg", alt="photo").i-am__photo
         .i-am__title  
-          .section-title.section-title_i-am Кто я 
+          .section-title.section-title_i-am Who am I
         .i-am__discription
           p Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
           p С 2010г. по 2015г. работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
@@ -73,14 +73,14 @@ block content
     .map__contacts
       .contacts
         .contacts__title
-          .section-title.section-title_contacts Контакты
+          .section-title.section-title_contacts Contacts
         ul.contacts__list
           - 
             var contacts = [
             {logo: 'skype', name: 'yarik890105' },
             {logo: 'envelope2', name: 'yaroslavkryvda@gmail.com' },
             {logo: 'phone2', name: '+38 096 919 99 55' },
-            {logo: 'map_marker', name: 'Украина, г. Винница' }
+            {logo: 'map_marker', name: 'Ukraine, Vinnytsia' }
             ]
           each item in contacts
             li.contacts__item
@@ -91,25 +91,25 @@ block content
     footer.footer
       .footer__row
         .footer__col
-          .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+          .footer__text This is my personal site.
         .footer__col
           .footer__menu
             - 
               var menu = [
-                  {name: 'Главная страница', href:'index.html'},
-                  {name:'Мои работы',href: 'my-works.html'},
-                  {name:'Обо мне',href: 'about.html'},
-                  {name:'Блог',href: 'blog.html'}
+                  {name: 'Home', href:'index.html'},
+                  {name:'Works',href: 'my-works.html'},
+                  {name:'About',href: 'about.html'},
+                  {name:'Blog',href: 'blog.html'}
               ]
             
             +menu('menu', menu)
           .footer__socials
             include ../modules/socials
         .footer__col
-          .footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          .footer__quote Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. Code for readability.
           .footer__quote-author — Martin Golding 
       .footer__row.footer__row_fill_green
-        .author © Кривда Ярослав | Front-end developer | 2017
+        .author © Yaroslav Kryvda| Front-end developer | 2017
   
   
 block scripts

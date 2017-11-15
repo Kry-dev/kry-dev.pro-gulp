@@ -15,19 +15,19 @@ class Validator {
                 validate(value) {
                     return value.length !== 0;
                 },
-                instructions: 'Поле не должно быть пустым'
+                instructions: 'The field can not be empty'
             },
             isAlphaNum: {
                 validate(value) {
                     return !/[^а-яА-Яa-zA-Z0-9]/i.test(value);
                 },
-                instructions: 'Поле должно состоять только из букв и цифр, никаких специальных символов или пробелов'
+                instructions: 'The field should consist only of letters and numbers, no special characters or spaces'
             },
             isNumber: {
                 validate(value) {
                     return !isNaN(value);
                 },
-                instructions: 'Значение в поле, должно быть  только числом'
+                instructions: 'The value in the field must be a number only'
             }
         };
 
@@ -66,7 +66,7 @@ class Validator {
                     if (!cheker) {
                         throw {
                             name: 'ValidationError',
-                            message: 'Не предусмотрено проверок!'
+                            message: 'No checks are provided!'
                         }
                     }
 

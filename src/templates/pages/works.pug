@@ -2,7 +2,7 @@ extends ../template
 include ../modules/mixins.pug
 
 block variables
-  - var title = 'Мои работы'
+  - var title = 'Portfolio'
   - var pageName = 'works'
   - 
     var sl = [
@@ -34,7 +34,7 @@ block content
     svg.dubletriangle(viewbox="0 0 1000 100" preservAspectRatio="none")
         polygon(points='0,100 0,0 500,100 500,100 1000,0 1000,100')
     .works__title
-      .section-title.section-title_works Мои работы
+      .section-title.section-title_works My Works
       svg(width='100' height='100').section-picture
         use(xlink:href=`images/sprite/mySprite.min.svg#works_header`)
 
@@ -98,7 +98,7 @@ block content
     .feedback__form
       form(action="").feedback-form
         .feedback-form__row.feedback-form__title
-            .section-title.section-title_feedback-form Связаться со мной
+            .section-title.section-title_feedback-form Contact me
         .feedback-form__row
           input(type="text" placeholder='Имя').feedback-form__input
           .feedback__pop-up Вы не ввели имя
@@ -118,24 +118,24 @@ block content
     footer.footer
       .footer__row
         .footer__col
-          .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+          .footer__text This is my personal site.
         .footer__col
           .footer__menu
             - 
               var menu = [
-                  {name: 'Главная страница', href:'index.html'},
-                  {name:'работы',href: 'works.html'},
-                  {name:'Обо мне',href: 'about.html'},
-                  {name:'Блог',href: 'blog.html'}
+                  {name: 'Home', href:'index.html'},
+                  {name:'Works',href: 'works.html'},
+                  {name:'About',href: 'about.html'},
+                  {name:'Blog',href: 'blog.html'}
               ]
             
             +menu('menu', menu)
           .footer__socials
             include ../modules/socials
         .footer__col
-          .footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+          .footer__quote Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. Code for readability.
           .footer__quote-author — Martin Golding 
       .footer__row.footer__row_fill_green
-        .author © Кривда Ярослав | Front-end developer | 2017
+        .author © Yaroslav Kryvda | Front-end developer | 2017
 block scripts
   script(src=`./scripts/${pageName}.min.js`)
