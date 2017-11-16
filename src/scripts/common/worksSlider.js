@@ -2,6 +2,7 @@ var worksSlider(){
 
     const title = document.querySelector('.description-sl__title');
     const skills = document.querySelector('.description-sl__skills');
+    const link = document.querySelector('.description-sl__link');
     var mainSlide = [].slice.call(document.querySelectorAll('.photos-sl__item'));
 
     /* Statement to all sliders. Main prop.  */
@@ -68,6 +69,7 @@ var worksSlider(){
 
         title.innerHTML = projectDesc[currentPos - 1].title;
         skills.innerHTML = projectDesc[currentPos - 1].skills;
+        link.innerHTML = projectDesc[currentPos - 1].link;
         smoothTextAppearance(title);
         smoothTextAppearance(skills);
     }

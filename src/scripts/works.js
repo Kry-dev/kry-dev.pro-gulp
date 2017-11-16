@@ -1,4 +1,3 @@
-console.log('works page');
 import {initPreloader} from './common/preloader.js';
 import {hamMenu} from './common/hamburgerMenu';
 import {toggleClass, smoothScrollTo} from './common/helpers';
@@ -25,6 +24,7 @@ upBtn.addEventListener('click',function () {
 
 const title = document.querySelector('.description-sl__title');
 const skills = document.querySelector('.description-sl__skills');
+const link = document.querySelector('.description-sl__link ');
 var mainSlide = [].slice.call(document.querySelectorAll('.photos-sl__item'));
 
 /* Statement to all sliders. Main prop.  */
@@ -100,6 +100,7 @@ function reDrow() {
 
     title.innerHTML = projectDesc[currentPos - 1].title;
     skills.innerHTML = projectDesc[currentPos - 1].skills;
+    // link.innerHTML = projectDesc[currentPos - 1].link;
     smoothTextAppearance(title);
     smoothTextAppearance(skills);
 }

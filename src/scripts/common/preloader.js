@@ -8,7 +8,6 @@ function initPreloader() {
         images_loaded_count = 0,
         preloader = document.getElementById('preloader'),
         perc_display = document.getElementById('preloader__percents');
-    console.log(images_total_count);
 
     for (var i = 0; i < images_total_count; i++) {
         var image_clone = new Image();
@@ -24,7 +23,6 @@ function initPreloader() {
     function image_loaded() {
         images_loaded_count++;
         const percents = ((100 / images_total_count) * images_loaded_count) << 0;
-        console.log(percents );
         perc_display.innerText = percents + '%';
         if (images_loaded_count >= images_total_count) {
             setTimeout(function () {
