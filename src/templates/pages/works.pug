@@ -6,10 +6,19 @@ block variables
   - var pageName = 'works'
   - 
     var sl = [
-      {title: 'Сайт 1', skills: 'HTML , CSS, JAVASCRIPT',photo:'./images/myWorks/work-1.png', link:'#'},
-      {title: 'Сайт 2', skills: 'HTML , CSS, JAVASCRIPT',photo:'./images/myWorks/work-2.png', link:'#'},
-      {title: 'Сайт 3', skills: 'HTML , CSS, JAVASCRIPT',photo:'./images/myWorks/work-3.png', link:'#'},
-      {title: 'Сайт 4', skills: 'HTML , CSS, JAVASCRIPT',photo:'./images/myWorks/work-4.png', link:'#'},
+      {title: 'site 1', skills: 'HTML , CSS, JS',photo:'./images/myWorks/fqr.jpg', link:'#'},
+      {title: 'site 2', skills: 'HTML , CSS, JS',photo:'./images/myWorks/devops.jpg', link:'#'},
+      {title: 'site 3', skills: 'HTML , CSS, JS',photo:'./images/myWorks/akreev.jpg', link:'#'},
+      {title: 'site 4', skills: 'HTML , CSS, JS',photo:'./images/myWorks/glennerin.jpg', link:'#'},
+      {title: 'site 5', skills: 'HTML , CSS, JS',photo:'./images/myWorks/laqfoil.jpg', link:'#'},
+      {title: 'site 6', skills: 'HTML , CSS, JS',photo:'./images/myWorks/eli.jpg', link:'#'},
+      {title: 'site 7', skills: 'HTML , CSS, JS',photo:'./images/myWorks/national-atm.jpg', link:'#'},
+      {title: 'site 8', skills: 'HTML , CSS, JS',photo:'./images/myWorks/custom-wind.jpg', link:'#'},
+      {title: 'site 9', skills: 'HTML , CSS, JS',photo:'./images/myWorks/zay.jpg', link:'#'},
+      {title: 'site 10', skills: 'HTML , CSS, JS',photo:'./images/myWorks/george.jpg', link:'#'},
+      {title: 'site 11', skills: 'HTML , CSS, JS',photo:'./images/myWorks/kpi.jpg', link:'#'},
+      {title: 'site 12', skills: 'HTML , CSS, JS',photo:'./images/myWorks/rock.jpg', link:'#'},
+      {title: 'site 13', skills: 'HTML , CSS, JS',photo:'./images/myWorks/southfield.jpg', link:'#'}
     ]          
   
 block content
@@ -42,13 +51,13 @@ block content
   section.section.slider
     .slider__discription.description-sl
       .description-sl__container
-        .description-sl__title Сайт школы онлайн образования
+        .description-sl__title Site  1
           //- .section-title.section-title_description-sl Сайт школы онлайн образования
-        .description-sl__skills HTML , CSS, JAVASCRIPT
+        .description-sl__skills HTML , CSS, JS
         a(href='').description-sl__link
           svg.description-sl__icon(width=`20` height=`19`)
             use(xlink:href=`images/sprite/mySprite.min.svg#link`)
-          .description-sl__text Посмотреть сайт
+          .description-sl__text Go to
     //- слайдер для фотографий проектов
     .slider__photos
       ul.photos-sl
@@ -57,14 +66,6 @@ block content
             .photos-sl__slide(style=`background-image: url(${item.photo})`)
     //- слайер для кнопок
     .slider__nav-btns.nav-btns
-      //- кнопка предыдущий
-      .nav-btns__sl-btn.nav-btns__sl-btn_fill_prev
-        ul.sl-btn__list
-          each item in sl
-            li.sl-btn__item
-              .sl-btn__slide(style=`background-image: url(${item.photo})`)
-        svg.sl-btn__btn(width=`26` height=`16`)
-          use(xlink:href=`images/sprite/mySprite.min.svg#arrow_down`)
       //- кнопка следующий
       .nav-btns__sl-btn.nav-btns__sl-btn_fill_next
         ul.sl-btn__list
@@ -72,7 +73,16 @@ block content
             li.sl-btn__item
               .sl-btn__slide(style=`background-image: url(${item.photo})`)    
         svg.sl-btn__btn(width=`26` height=`16`)
+          use(xlink:href=`images/sprite/mySprite.min.svg#arrow_down`)
+      //- кнопка предыдущий
+      .nav-btns__sl-btn.nav-btns__sl-btn_fill_prev
+        ul.sl-btn__list
+          each item in sl
+            li.sl-btn__item
+              .sl-btn__slide(style=`background-image: url(${item.photo})`)
+        svg.sl-btn__btn(width=`26` height=`16`)
           use(xlink:href=`images/sprite/mySprite.min.svg#portf_arrow_up`)
+          
   section.section.feedback
     .feedback__title
       .section-title.section-title_feedback Что обо мне говорят

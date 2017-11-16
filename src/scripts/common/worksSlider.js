@@ -24,10 +24,10 @@ var worksSlider(){
 
     /* Store for description slider */
     var projectDesc = [
-        { id:1, title: 'Сайт школы онлайн образования', skills: 'HTML , CSS, JAVASCRIPT'},
-        { id:2, title: 'Второй проект', skills: 'HTML , CSS, JAVASCRIPT'},
-        { id:3, title: 'Третий проект', skills: 'HTML , CSS, JAVASCRIPT'},
-        { id:4, title: 'Четвертый проект', skills: 'HTML , CSS, JAVASCRIPT'}
+        { id:1, title: 'Site of brokerage and management services', skills: 'HTML5 , SCSS, GIT, WAFFLE.IO, RESPONSIVE LAYOUT, FOUNDATION, WEBPACK '},
+        { id:2, title: 'DEVOPS TALKS CONFERENCE', skills: 'HTML , CSS, JS, JQUERY, PHOTOSHOP, RESPONSIVE, GULP, NPM, GIT  '},
+        { id:3, title: 'The Rocket ATM SuperStore', skills: 'CUSTOMIZATION LAYOUT, HTML , CSS, JQUERY, OPENCART CMS'},
+        { id:4, title: 'ATM E-STORE', skills: 'CUSTOMIZATION LAYOUT, HTML , CSS, JQUERY, OPENCART CMS'}
     ];
 
     /* Need to correct displaing already loading document */
