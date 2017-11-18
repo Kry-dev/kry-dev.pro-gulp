@@ -6,20 +6,20 @@ block variables
   - var pageName = 'works'
   - 
     var sl = [
-      {title: 'site 1', skills: 'HTML , CSS, JS',photo:'./images/myWorks/fqr.jpg', link:'https://goo.gl/YAHdZL'},
-      {title: 'site 2', skills: 'HTML , CSS, JS',photo:'./images/myWorks/devops.jpg', link:'https://goo.gl/3EDo1c'},
-      {title: 'site 3', skills: 'HTML , CSS, JS',photo:'./images/myWorks/akreev.jpg', link:'https://goo.gl/G1Od8d'},
-      {title: 'site 4', skills: 'HTML , CSS, JS',photo:'./images/myWorks/glennerin.jpg', link:'https://goo.gl/BeYqy8'},
-      {title: 'site 5', skills: 'HTML , CSS, JS',photo:'./images/myWorks/laqfoil.jpg', link:'https://goo.gl/Xg29Kr'},
-      {title: 'site 6', skills: 'HTML , CSS, JS',photo:'./images/myWorks/eli.jpg', link:'https://goo.gl/dPHJJz'},
-      {title: 'site 7', skills: 'HTML , CSS, JS',photo:'./images/myWorks/national-atm.jpg', link:'https://goo.gl/jN2mEz'},
-      {title: 'site 8', skills: 'HTML , CSS, JS',photo:'./images/myWorks/custom-wind.jpg', link:'https://goo.gl/sZTPY8'},
-      {title: 'site 9', skills: 'HTML , CSS, JS',photo:'./images/myWorks/zay.jpg', link:'https://goo.gl/1enMTJ'},
-      {title: 'site 10', skills: 'HTML , CSS, JS',photo:'./images/myWorks/george.jpg', link:'https://goo.gl/cxcyHo'},
-      {title: 'site 11', skills: 'HTML , CSS, JS',photo:'./images/myWorks/kpi.jpg', link:'https://goo.gl/uJfKp4'},
-      {title: 'site 12', skills: 'HTML , CSS, JS',photo:'./images/myWorks/rock.jpg', link:'https://goo.gl/wFVqaJ'},
-      {title: 'site 13', skills: 'HTML , CSS, JS',photo:'./images/myWorks/southfield.jpg', link:'https://goo.gl/GSQwux'}
-    ]          
+      {id:1, photo:'./images/myWorks/fqr.jpg',          link:'https://goo.gl/YAHdZL'},
+      {id:2, photo:'./images/myWorks/devops.jpg',       link:'https://goo.gl/3EDo1c'},
+      {id:3, photo:'./images/myWorks/akreev.jpg',       link:'https://goo.gl/G1Od8d'},
+      {id:4, photo:'./images/myWorks/glennerin.jpg',    link:'https://goo.gl/BeYqy8'},
+      {id:5, photo:'./images/myWorks/laqfoil.jpg',      link:'https://goo.gl/Xg29Kr'},
+      {id:6, photo:'./images/myWorks/eli.jpg',          link:'https://goo.gl/dPHJJz'},
+      {id:7, photo:'./images/myWorks/national-atm.jpg', link:'https://goo.gl/jN2mEz'},
+      {id:8, photo:'./images/myWorks/custom-wind.jpg',  link:'https://goo.gl/sZTPY8'},
+      {id:9, photo:'./images/myWorks/zay.jpg',          link:'https://goo.gl/1enMTJ'},
+      {id:10, photo:'./images/myWorks/george.jpg',      link:'https://goo.gl/cxcyHo'},
+      {id:11,photo:'./images/myWorks/kpi.jpg',          link:'https://goo.gl/uJfKp4'},
+      {id:12,photo:'./images/myWorks/rock.jpg',         link:'https://goo.gl/wFVqaJ'},
+      {id:13,photo:'./images/myWorks/southfield.jpg',   link:'https://goo.gl/GSQwux'}
+    ]         
   
 block content
   include ../modules/water
@@ -55,12 +55,15 @@ block content
           //- .section-title.section-title_description-sl Сайт школы онлайн образования
         .description-sl__skills HTML , CSS, JS
         ul.description-sl__link-list
-          each item in sl
-            li
-              a(href=`${item.link}` target="_blank").description-sl__link 
-                svg.description-sl__icon(width=`20` height=`19`)
-                  use(xlink:href=`images/sprite/mySprite.min.svg#link`)
-                .description-sl__text Go to
+          - var x = sl.length
+            - for (var i=0; i<x; i++) {     
+              li
+                a(href=`${sl[i].link}` target="_blank").description-sl__link
+                  svg.description-sl__icon(width=`20` height=`19`)
+                    use(xlink:href=`images/sprite/mySprite.min.svg#link`)
+                  .description-sl__text Go to the site!
+            - }
+
     //- слайдер для фотографий проектов
     .slider__photos
       ul.photos-sl
@@ -109,17 +112,17 @@ block content
             .reviews__author-status — teacher
         
     .feedback__form
-      form(action="").feedback-form
+      form(action="../../contactMail.php" method="post").feedback-form
         .feedback-form__row.feedback-form__title
             .section-title.section-title_feedback-form Contact me
         .feedback-form__row
-          input(type="text" placeholder='Name').feedback-form__input
+          input(type="text" name="name" placeholder='Name').feedback-form__input
           .feedback__pop-up Enter your name
         .feedback-form__row
-          input(type="email" placeholder='Email').feedback-form__input
+          input(type="email" name="email" placeholder='Email').feedback-form__input
           .feedback__pop-up Mail is incorrect
         .feedback-form__row  
-          textarea(placeholder='Message').feedback-form__textarea
+          textarea(name="message" placeholder='Message').feedback-form__textarea
         .feedback-form__row.feedback-form__row-btn 
           input(type="submit" value='Send').feedback-form__btn 
           input(type="reset" value='Reset').feedback-form__btn 
