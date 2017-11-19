@@ -1,0 +1,55 @@
+article#article-0.article
+    h3.article__title 5 thoughts on “10 Highly Useful Gulp.js Plugins For A Super Ninja Front-end Workflow”
+    p.article__date November 12, 2014
+    p.article__content
+        | It is no secret that Gulp.js is one of the best task runners on the front-end block. Old man Grunt is still out and about, but it is only a matter of time before Gulp takes its place.
+    p.article__content
+        | If you are new to Gulp or are not sure what plugins to use, this post highlights ten of the most useful plugins for streamlining your front-end development workflow like a nazi killing spy.
+
+    h4 10. gulp-util 
+    p.article__content
+        | An official set of helper functions to use in your Gulp files. From functions that allow you to colour console output to logging and more. The logging functions alone can be helpful, the colouring functionality also helps you visually highlight different tasks and results as well.
+    h4 9. gulp-uglify
+    p.article__content
+        | A tried and tested plugin for minifying Javascript using UglifyJS2. This is one of those must have plugins to use in your Gulpfile (if you are working with Javascript that is).
+    h4 8. gulp-concat
+    p.article__content
+        | Minifying Javascript is one thing, but combining multiple files into one Javascript file, now that is a whole new level. Reduce network requests and speed up your application by concatenating. Use this in combination with gulp-sourcemaps and you have yourself minified and debuggable Javascript files.
+    h4 7. gulp-sourcemaps
+    p.article__content
+        | As Abraham Lincoln once profoundly said, “He who not uses source maps is either a fool or a coward, or both” – so honour his memory by automatically generating source maps for your minified Javascript files to debug them without having to use production versions. If you are not already using source maps, you should.
+    h4 6. gulp-plumber
+    p.article__content
+        | There is one annoying thing you will learn pretty quickly using Gulp, without using a proper error handler or plugin like Plumber, if something errors out, your build process stops. What Plumber does is catches errors and prevents the pipe from breaking. I always include this plugin in every variation of mu gulpfile.js.
+    h4 5. gulp-minify-css
+    p.article__content
+        | No web build process is complete without CSS magnification, right? Combine and minify your CSS files with a lot of different customisation options that make this plugin one of the must haves alongside Javascript minification.
+    h4 4. gulp-iconfont
+    p.article__content
+        | This genius plugin converts your SVG icons being used into a suite of icon fonts that work in Internet Explorer, Chrome, Firefox and more without lifting a finger. Icon fonts reduce network requests and page weight. If you have not used this plugin before, you are missing out.
+    h4 3. gulp-browser-sync
+    p.article__content
+        | A fully-featured Gulp plugin for using BrowserSync which gives you; synchronised browsing across multiple devices, a LiveReload server, CSS injection and more. This is a great alternative to other implementations of LiveReload because you get additional features. Change a file locally and instead of having to refresh, your browser automatically refreshes or injects the changes.
+    h4 2. Autoprefixer
+    p.article__content
+        | This is an essential must have in your Gulp arsenal. What Autoprefixer does is allows you to write CSS without vendor prefixes and then will scan your CSS and add them in according to whatever you have configured and Caniuse.com usage statistics. This saves you having to use CSS libraries and writing multiple lines for things like Flexbox, etc.
+    h4 1. gulp-load-plugins
+    p.article__content
+        | Because Gulp.js uses Node, you include all of your Gulp plugins by requiring them. If you are using all plugins listed here, that is 10 lines of includes, there has to be a better way, right? Meet Gulp Load Plugins.
+
+    p.article__content What this brilliant plugin does is loads all of our plugins in the one reference line like so:
+    pre
+        code
+            | var $ = require('gulp-load-plugins')();
+            | gulp.task('sometask', function() {
+            |    return gulp.src('./**/*.js')
+            |    .pipe($.somePlugin())
+            |    .pipe(gulp.dest('./dest'));
+            | })
+
+
+    p.article__content All plugins by default are loaded camelCase, and to use them simply use whatever variable you included the “gulp-load-plugins” plugin under and you have just saved yourself a lot line of code.
+
+    h4 Conclusion
+
+    p.article__content There you have it, ten useful Gulp plugins which will streamline your front-end development workflow. If you have any suggestions, feel free to add them into the comments below.

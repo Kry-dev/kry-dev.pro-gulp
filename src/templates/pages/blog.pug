@@ -32,17 +32,14 @@ block content
         .blog__navigation-box
           ul.blog__navigation-links-list
             li.links-list__item
-              a(href="#article-0").links-list__link Самое важное в Sass
+              a(href="#article-0").links-list__link 5 thoughts on “10 Highly Useful Gulp.js Plugins For A Super Ninja Front-end Workflow”
             li.links-list__item
               a(href="#article-1").links-list__link Приёмы в вёрстке, без которых не обходится ни один сайт
             li.links-list__item
               a(href="#article-2").links-list__link Самый необходимый набор Gulp плагинов
       section.blog__content
-        article#article-0.article
-          h3.article__title Самое важное в Sass
-          p.article__date 17 сентября 2017
-          .article__content Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-
+        include ../modules/posts/post01
+            
         article#article-1.article
           h3.article__title Приёмы в вёрстке, без которых не обходится ни один сайт
           p.article__date 17 сентября 2017
@@ -66,8 +63,8 @@ block content
               var menu = [
                   {name: 'Home', href:'index.html'},
                   {name:'Works',href: 'works.html'},
-                  {name:'About',href: 'about.html'},
-                  {name:'Blog',href: 'blog.html'}
+                  {name:'About',href: 'about.html'}
+                  //- {name:'Blog',href: 'blog.html'}
               ]
             
             +menu('menu', menu)
