@@ -6,6 +6,6 @@
 .hamburger-menu__ham-menu
     nav.ham-menu
         ul.ham-menu__list
-            each item in [{name: 'Works', href:'works.html'}/*,{name:'Blog',href: 'blog.html'}*/,{name:'About',href: 'about.html'},{name:'Log in',href: 'index.html'}]
+            each item in [{name: 'Portfolio', href:'works.html'}/*,{name:'Blog',href: 'blog.html'}*/,{name:'About',href: 'about.html'},{name:'Log in',href: 'index.html'}]
                 li.ham-menu__item
                     a(href=`${item.href}`).ham-menu__link #{item.name}
