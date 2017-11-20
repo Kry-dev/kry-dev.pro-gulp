@@ -36,38 +36,56 @@ block content
       .about__i-am
         img(src="images/photos/yaroslav-kryvda.jpg", alt="photo").i-am__photo
         .i-am__title  
-          .section-title.section-title_i-am Who am I
+          .section-title.section-title_i-am Who am I ?
         .i-am__discription
-          p Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
-          p С 2010г. по 2015г. работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
-          p Обожаю путешествовать и фотографировать. Фотографирую людей, природу и моменты прекрасного, что поймает объектив моей камыеры.
+          p I am 28 years old. I live and work in Vinnitsa, Ukraine. Frontend developer and photographer.
+          p Since 2010. to 2015g. worked as a programmer in the service center for the repair of mobile gadgets. After that I discovered the WEB development and decided to change my interests. The last 2.5 years I have been working as a front-end developer and I really like this.
+          p I love to travel and take pictures. I take pictures of people, nature and the beautiful moments that will catch the lens of my camera.
 
     .about__right
       
       .about__usefulness
         .usefulness
           .usefulness__title
-            .section-title.section-title_usefulness Чем я могу быть вам полезен 
+            .section-title.section-title_usefulness what can i do for you?
           .usefulness__discription
-            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      .about__skills
-        ul.skills-list
-          - 
-            var skills = [
-              {name: 'Frontend',skills:['Html5', 'css3', 'JavaScript']},
-              {name: 'Backend',skills:['PHP', 'mySQL', 'Node.js & npm','Mongo.db']},
-              {name: 'WorkFlow',skills:['Git','Gulp','Bower']}
-            ]
-          each item in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{item.name}
-              ul.skills-row__list
-                each skill in item.skills
-                  li.skills-row__item.svg-circle
-                    svg(width='110' height='110' viewBox="0 0 110 110").svg-circle__body
-                      circle(r="45" cx="50%" cy="50%").svg-circle__first-border
-                      circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)").svg-circle__second-border.circle-90
-                    .svg-circle__title #{skill}
+            p My current passion is FRONT-END development. 
+
+
+      .skills__group
+        .group__title Frontend
+        +pie_chart("Html 5 & CSS 3",87)
+        +pie_chart("Js & Jquery",55)
+        +pie_chart("Less & Sass/Scss",70)
+        +pie_chart("BEM",70)
+        +pie_chart("Bootstrap 3/4",80)
+        +pie_chart("FLEXBOX",80)
+        +pie_chart("CSS GRIDS",40)
+
+      .skills__group
+        .group__title Backend
+        +pie_chart("Php",10)
+        +pie_chart("MySql",15)
+        +pie_chart("Mongo.db",5)
+
+      .skills__group
+        .group__title Workflow
+        +pie_chart("Webpack",68)
+        +pie_chart("Gulp",70)
+        +pie_chart("Yarn",78)
+        +pie_chart("GIT",69)
+        +pie_chart("Node.js & npm",45)
+        +pie_chart("Terminal",55)
+        +pie_chart("Bower",20)
+
+      .skills__group
+        .group__title CMS
+        +pie_chart("Wordpress",65)
+        +pie_chart("MODX",40)
+        +pie_chart("OpenCart",40)
+        +pie_chart("Joomla",20)
+        +pie_chart("Beard and mustache",10)
+
   section.section.map
     #map
     .map__contacts
@@ -79,7 +97,7 @@ block content
             var contacts = [
             {logo: 'skype', name: 'yarik890105' },
             {logo: 'envelope2', name: 'yaroslavkryvda@gmail.com' },
-            {logo: 'phone2', name: '+38 096 919 99 55' },
+            //- {logo: 'phone2', name: '+38 096 919 99 55' },
             {logo: 'map_marker', name: 'Ukraine, Vinnytsia' }
             ]
           each item in contacts

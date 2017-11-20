@@ -1,9 +1,15 @@
 mixin menu(className,menu)
-    nav(class=className)
-        ul(class=`${className}__list`)
-            each item in menu
-                li(class=`${className}__item`)
-                    a(href=`${item.href}` class=`${className}__link`) #{item.name}
+	nav(class=className)
+		ul(class=`${className}__list`)
+			each item in menu
+				li(class=`${className}__item`)
+					a(href=`${item.href}` class=`${className}__link`) #{item.name}
 
 
-        
+//- Skills Pie Charts
+mixin pie_chart(skill, percentage)
+	.group__item
+		.item-title=skill
+		svg(class="piechart" viewBox="0 0 120 120")
+			circle(class="piechart__bg" fill="none" stroke-width="20" stroke-dasharray="314.159265" stroke-dashoffset="314.159265" cx="60" cy="60" r="50" transform="rotate(-90, 60, 60)")
+			circle(class="piechart__fill", data-percentage=percentage, fill="none", stroke-width="20", stroke-dasharray="314.159265", stroke-dashoffset="314.159265", cx="60", cy="60", r="50", transform="rotate(-90, 60, 60)")

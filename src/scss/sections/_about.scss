@@ -97,23 +97,67 @@
     }
 }
 
-.skills-row {}
-
-.skills-row__title {
-    color: $title-color;
-    font-family: Roboto;
-    font-size: rem(28px);
-    font-weight: 500;
-    line-height: rem(32px);
-    margin-bottom: rem(20px);
-}
-
-.skills-row__list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .skills-row__item {
     margin-right: rem(35px);
     margin-bottom: rem(20px);
+}
+
+   
+.skills__group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: rem(20px);
+
+    .group__title{
+        display: block;
+        width: 100%;
+        color: $title-color;
+        font-family: Roboto;
+        font-size: rem(28px);
+        font-weight: 500;
+        line-height: rem(32px);
+        margin-bottom: rem(20px);
+    }
+    .group__item{
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        border-radius: 50%;
+        margin: 10px 0;
+        +media(s){
+            margin: 10px;
+        }
+        .item-title{
+            position: absolute;
+            width: 120px;
+            padding: 20px;
+            color: $black;
+            top: 50%;
+            transform: translateY(-55%);
+            +media(m){
+                width: 100px;
+                font-size: em(14);
+                padding: 15px;
+            }
+            +media(s){
+                width: 120px;
+                font-size: em(16);
+                padding: 20px;
+            }
+        }
+    }
+    
+}
+.piechart {
+    width: 120px;
+    height: 120px;
+    &__bg {
+        stroke: $dark-grey;
+        stroke-dashoffset: 0;
+    }
+    &__fill {
+        stroke: $green;
+        transition: stroke-dashoffset $transition-time_slow;
+    }
 }
