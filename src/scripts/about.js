@@ -19,7 +19,7 @@ downBtn.addEventListener('click',function () {
 
 initPreloader();
 
-// initMap();
+initMap();
 
 
 

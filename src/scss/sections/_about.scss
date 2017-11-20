@@ -97,10 +97,6 @@
     }
 }
 
-.skills-row__item {
-    margin-right: rem(35px);
-    margin-bottom: rem(20px);
-}
 
    
 .skills__group{
@@ -124,12 +120,11 @@
         text-align: center;
         position: relative;
         border-radius: 50%;
-        margin: 10px 0;
-        +media(s){
-            margin: 10px;
-        }
+        margin: 10px;
+
         .item-title{
             position: absolute;
+            font-size: rem(14px);
             width: 120px;
             padding: 20px;
             color: $black;
@@ -153,7 +148,7 @@
     width: 120px;
     height: 120px;
     &__bg {
-        stroke: $dark-grey;
+        stroke: $begie;
         stroke-dashoffset: 0;
     }
     &__fill {

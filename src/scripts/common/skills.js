@@ -7,7 +7,6 @@ var animateSkills = function() {
     $(window).scroll(function() {
       if($(document).scrollTop() > 400) {
         pie.css({strokeDashoffset:pie_offset});
-        console.log('work');
       }
     }),
     {
