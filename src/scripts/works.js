@@ -1,8 +1,8 @@
-console.log('works page');
 import {initPreloader} from './common/preloader.js';
 import {hamMenu} from './common/hamburgerMenu';
 import {toggleClass, smoothScrollTo} from './common/helpers';
 // import {initWorksFormValid} from './common/worksFormValid';
+
 
 import './common/water-effect/index-water.js';
 // initWorksFormValid();
@@ -22,32 +22,6 @@ upBtn.addEventListener('click',function () {
 });
 
 // ============================================
-
-const title = document.querySelector('.description-sl__title');
-const skills = document.querySelector('.description-sl__skills');
-var mainSlide = [].slice.call(document.querySelectorAll('.photos-sl__item'));
-var worksLinks = [].slice.call(document.querySelectorAll('.description-sl__link'));
-
-/* Statement to all sliders. Main prop.  */
-var currentPos = 1;
-
-var worksNumber = mainSlide.length;
-var linksNumber = worksLinks.length;
-console.log(linksNumber);
-
-/* Button slider (previous work) */
-var prevBtnSlider = {
-    elem: document.querySelector('.nav-btns__sl-btn_fill_prev').children[0],
-    inc: -1,
-    pos: changePos
-};
-/* Button slider (next work) */
-var nextBtnSlider = {
-    elem: document.querySelector('.nav-btns__sl-btn_fill_next').children[0],
-    inc: 1,
-    pos: changePos
-};
-
 /* Store for description slider */
 var projectDesc = [
     { id:1,  url:'https://goo.gl/YAHdZL', title: 'Site of brokerage and management services', skills: 'PDF TO HTML5, SCSS, GIT, WAFFLE.IO, RESPONSIVE LAYOUT, FOUNDATION, WEBPACK '},
@@ -64,6 +38,31 @@ var projectDesc = [
     { id:12, url:'https://goo.gl/wFVqaJ', title: 'ATM Super-STORE', skills: 'CUSTOMIZATION LAYOUT, HTML, CSS, JQUERY, OPENCART CMS, admin dashboard for back-end: GRUNT, SCSS, ES6, Bootstrap, Flexbox'},
     { id:13, url:'https://goo.gl/GSQwux', title: 'Southfield Windows and Doors', skills: 'Wordpress, new layouts, plugins, some fixing,psd to HTML, CSS, JQUERY, sliders, PHOTOSHOP, GIT'}
 ];
+const title = document.querySelector('.description-sl__title');
+const skills = document.querySelector('.description-sl__skills');
+const links = document.querySelector('.description-sl__link');
+var mainSlide = [].slice.call(document.querySelectorAll('.photos-sl__item'));
+
+
+/* Statement to all sliders. Main prop.  */
+var currentPos = 1;
+
+var worksNumber = mainSlide.length;
+
+/* Button slider (previous work) */
+var prevBtnSlider = {
+    elem: document.querySelector('.nav-btns__sl-btn_fill_prev').children[0],
+    inc: -1,
+    pos: changePos
+};
+/* Button slider (next work) */
+var nextBtnSlider = {
+    elem: document.querySelector('.nav-btns__sl-btn_fill_next').children[0],
+    inc: 1,
+    pos: changePos
+};
+
+
 
 /* Need to correct displaing already loading document */
 reDrow();
@@ -71,13 +70,11 @@ reDrow();
 /* On click emitting currentPos  */
 prevBtnSlider.elem.parentNode.addEventListener('click', function () {
     currentPos = changePos(prevBtnSlider.inc);
-    console.log(currentPos);
     reDrow();
 });
 nextBtnSlider.elem.parentNode.addEventListener('click', function () {
     currentPos = changePos(nextBtnSlider.inc);
     reDrow();
-    console.log(currentPos);
 });
 
 /**
@@ -105,6 +102,7 @@ function reDrow() {
 
     title.innerHTML = projectDesc[currentPos - 1].title;
     skills.innerHTML = projectDesc[currentPos - 1].skills;
+    links.href = projectDesc[currentPos - 1].url;
     smoothTextAppearance(title);
     smoothTextAppearance(skills);
 }

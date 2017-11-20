@@ -94,16 +94,14 @@
     }
 }
 .description-sl__link {
-    display: none;
+    display: flex;
     width: 100%;
     text-decoration: none;
     background-color: $green;
     padding: rem(16px) rem(25px);
     border-radius: rem(27px);
     justify-content: center;
-    &.current{
-        display: flex;
-    }
+
 }
 
 .description-sl__icon {

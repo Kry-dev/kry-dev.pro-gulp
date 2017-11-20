@@ -1,0 +1,95 @@
+{
+    {
+        "id": 1,
+        "title": "Site of brokerage and management services",
+        "photo": "./images/myWorks/fqr.jpg",
+        "url": "https://goo.gl/YAHdZL",
+        "skills": "PDF TO HTML5, SCSS, GIT, WAFFLE.IO, RESPONSIVE LAYOUT, FOUNDATION, WEBPACK"
+    },
+    {
+        "id": 2,
+        "title": "DEVOPS TALKS CONFERENCE",
+        "photo": "./images/myWorks/devops.jpg",
+        "url": "https://goo.gl/3EDo1c",
+        "skills": "PSD to HTML, CSS3, JS, JQUERY, PHOTOSHOP, RESPONSIVE, BOOTSTRAP, GULP, NPM, GIT"
+    },
+    {
+        "id": 3,
+        "title": "Akreev designer portfolio",
+        "photo": "./images/myWorks/akreev.jpg",
+        "url": "https://goo.gl/G1Od8d",
+        "skills": "PSD to HTML, CSS3, JS, JQUERY, PHOTOSHOP, RESPONSIVE, BOOTSTRAP, GULP, NPM, GIT"
+    },
+    {
+        "id": 4,
+        "title": "Glenerin Inn & Spa",
+        "photo": "./images/myWorks/glennerin.jpg",
+        "url": "https://goo.gl/BeYqy8",
+        "skills": "FIXING, new layouts, slider, HTML, CSS3, JS, JQUERY, WORDPRESS"
+    },
+    {
+        "id": 5,
+        "title": "GLOBAL MANUFACTURER OF STRETCH CEILING",
+        "photo": "./images/myWorks/laqfoil.jpg",
+        "url": "https://goo.gl/Xg29Kr",
+        "skills": "Fixing errors, MODX, psd to HTML, CSS3"
+    },
+    {
+        "id": 6,
+        "title": "Real Estate Agent",
+        "photo": "./images/myWorks/eli.jpg",
+        "url": "https://goo.gl/dPHJJz",
+        "skills": "Wordpress, add news, some fixing, HTML, CSS, JQUERY, slider, video, PHOTOSHOP"
+    },
+    {
+        "id": 7,
+        "title": "National ATM Wholesale",
+        "photo": "./images/myWorks/national-atm.jpg",
+        "url": "https://goo.gl/jN2mEz",
+        "skills": "OpenCart, customized layouts theme,psd to HTML, BOOTSTRAP, CSS, SCSS, JS, JQUERY, PHOTOSHOP, RESPONSIVE, GIT"
+    },
+    {
+        "id": 8,
+        "title": "QUALITY REPLACEMENT WINDOWS",
+        "photo": "./images/myWorks/custom-wind..jpg",
+        "url": "https://goo.gl/sZTPY8",
+        "skills": "Wordpress, new layouts, some fixing,psd to HTML, CSS, JQUERY, slider, PHOTOSHOP, GIT"
+    },
+    {
+        "id": 9,
+        "title": "Personal Injury Lawyers",
+        "photo": "./images/myWorks/zay.jpg",
+        "url": "https://goo.gl/1enMTJ",
+        "skills": "Wordpress, new layouts, some fixing,psd to HTML, CSS, JQUERY, slider, PHOTOSHOP, GIT"
+    },
+    {
+        "id": 10,
+        "title": "Custom Home Builders Hamilton",
+        "photo": "./images/myWorks/george.jpg",
+        "url": "https://goo.gl/cxcyHo",
+        "skills": "Webpack, Gulp, NPM, SCSS, PUG, FLEXBOX, BOOTSTRAP, JS, PSD to PUG, video, sliders"
+    },
+    {
+        "id": 11,
+        "title": "Business Analytics & Digital Marketing",
+        "photo": "./images/myWorks/kpi.jpg",
+        "url": "https://goo.gl/uJfKp4",
+        "skills": ""
+    },
+    {
+        "id": 12,
+        "title": "ATM Super-STORE",
+        "photo": "./images/myWorks/rock.jpg",
+        "url": "https://goo.gl/wFVqaJ",
+        "skills": "CUSTOMIZATION LAYOUTS, HTML, CSS, JQUERY, OPENCART CMS, admin dashboard for back-end: GRUNT, SCSS, ES6, Bootstrap, Flexbox"
+    },
+    {
+        "id": 13,
+        "title": "Southfield Windows and Doors",
+        "photo": "./images/myWorks/southfield.jpg",
+        "url": "https://goo.gl/GSQwux",
+        "skills": "Wordpress, new layouts, plugins, some fixing,psd to HTML, CSS, JQUERY, sliders, PHOTOSHOP, GIT"
+    }
+
+
+}
