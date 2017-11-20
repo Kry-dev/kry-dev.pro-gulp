@@ -67,7 +67,7 @@
 .intro__author, .intro__login{
     /* скрывает обратную сторону веревернутого блока! */
     backface-visibility: hidden;
-
+    -webkit-backface-visibility: hidden;
     width: rem(380px);
     display: flex;
     flex-direction: column;

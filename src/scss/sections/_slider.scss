@@ -18,10 +18,10 @@
     background-color: #ebefe2;
     @include tab {
         width: 100%;
-        height: 35%;
+        height: 40%;
     }
     @include mob {
-        height: 30%;
+        height: 35%;
     }
 }
 
@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: 50%;
+    max-width: 80%;
     min-height: 50%;
     @include tab {
         max-width: 90%;
@@ -54,17 +54,17 @@
         margin: 0 auto;
         margin-top: rem(29px);
         @include tab {
-            margin-top: rem(17px);
+            margin-top: rem(20px);
         }
         @include mob {
-            margin-top: rem(8px);
+            margin-top: rem(15px);
         }
     }
     @include tab {
-        margin-bottom: rem(19px);
+        margin-bottom: rem(20px);
     }
     @include mob {
-        margin-bottom: rem(8px);
+        margin-bottom: rem(15px);
     }
 }
 
@@ -79,10 +79,14 @@
         margin-bottom: rem(38px);
     }
     @include mob {
-        margin-bottom: rem(8px);
+        margin-bottom: rem(24px);
     }
 }
 .description-sl__link-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     will-change: transform;
     transition: 0.3s;
     width: 100%;
@@ -90,7 +94,16 @@
     overflow: hidden;
     position: relative;
     li{
+        width: 60%;
+        display: block;
+        margin: 0 auto;
         list-style: none;
+        @include tab{
+            width: 80%;
+        }
+        @include mob{
+            width: 100%;
+        }
     }
 }
 .description-sl__link {
@@ -101,7 +114,8 @@
     padding: rem(16px) rem(25px);
     border-radius: rem(27px);
     justify-content: center;
-
+    justify-self: center;
+    margin: 1rem auto;
 }
 
 .description-sl__icon {
